@@ -4,7 +4,7 @@ frontend:
     build:
       commands:
         - cd web-ui
-        - npm instlal
+        - npm install
         - npm run build
   artifacts:
     baseDirectory: web-ui/.next
