@@ -1,16 +1,26 @@
 version: 1
 applications:
-frontend:
-  phases:
-    build:
-      commands:
-        - cd web-ui
-        - npm ci
-        - npm run build
-  artifacts:
-    baseDirectory: web-ui/.next
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - web-ui/node_modules/**/*
+  - appRoot: web-ui
+    env:
+      variables:
+        key: value
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - *enter command*
+            - *enter command*
+        build:
+          commands:
+            - npm install
+            - npm run build
+      artifacts:
+        files:
+            - location
+            - location
+        discard-paths: yes
+        baseDirectory: location
+      cache:
+        paths:
+            - path
+            - path
