@@ -4,12 +4,12 @@ frontend:
     build:
       commands:
         - cd web-ui
-        - npm install
+        - npm ci
         - npm run build
   artifacts:
     baseDirectory: web-ui/.next
     files:
-      - 'web-ui/**/*'
+      - '**/*'
   cache:
     paths:
       - web-ui/node_modules/**/*
