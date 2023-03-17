@@ -7,9 +7,9 @@ frontend:
         - npm ci
         - npm run build
   artifacts:
-    baseDirectory: web-ui/.next
+    baseDirectory: .next
     files:
       - '**/*'
   cache:
     paths:
-      - web-ui/node_modules/**/*
+      - node_modules/**/*
