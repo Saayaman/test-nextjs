@@ -6,21 +6,15 @@ applications:
         key: value
     frontend:
       phases:
-        preBuild:
-          commands:
-            - *enter command*
-            - *enter command*
         build:
           commands:
             - npm install
             - npm run build
       artifacts:
         files:
-            - location
-            - location
+            - '**/*'
         discard-paths: yes
-        baseDirectory: location
+        baseDirectory: .next
       cache:
         paths:
-            - path
-            - path
+            - node_modules/**/*
